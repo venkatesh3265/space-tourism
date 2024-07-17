@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@keyframes slide-in {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+
+ 
+.logo-span{
+  position: absolute;
+  bottom: 47%;
+  left: 11%;
+  width: 41%;
+  height: 1px;
+  background-color: grey;
+}
+@media only screen and (min-width: 1000px) {
+  .custom-border {
+    position: relative;
+    padding-bottom: 1.5rem;
+  }
+.custom-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: white;
+  animation: slide-in 0.3s ease-out;
+  margin: 0 25%;
+}
+
+.button-container {
+  position: relative;
+}
+
+.button-hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background-color: rgba(128, 128, 128, 0.3); /* grey layer with opacity */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+}
+
+.button-hover:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+.logo-span {
+  display: block !important;
+}
+}
+@media only screen and (max-width: 767px) {
+  .custom-border::after {
+    display: none; /* Hide the border on smaller screens */
+  }
+}
+@media (min-width: 768px) { /* Adjust max-width as per your tablet breakpoint */
+  .logo-span {
+      display: none;
+  }
+}
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  /* .input {
+    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+  } */
+}
+
+@layer utilities {
+  .padding {
+    @apply sm:px-16 px-8 sm:py-24 py-12;
+  }
+
+  .padding-x {
+    @apply sm:px-16 px-8;
+  }
+
+  .padding-y {
+    @apply sm:py-24 py-12;
+  }
+
+  .padding-l {
+    @apply sm:pl-16 pl-8;
+  }
+
+  .padding-r {
+    @apply sm:pr-16 pr-8;
+  }
+
+  .padding-t {
+    @apply sm:pt-24 pt-12;
+  }
+
+  .padding-b {
+    @apply sm:pb-24 pb-12;
+  }
+
+  .info-text {
+    @apply  text-slate-gray text-lg leading-7;
+  }
+}
