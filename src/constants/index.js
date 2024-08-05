@@ -11,7 +11,7 @@ import stage from "../assets/technology/image-spaceport-portrait.jpg";
 import capsule from "../assets/technology/image-space-capsule-portrait.jpg";
 
 export const navLinks = [
-    { path: "/", label: "Home" },
+    { path: "/space-tourism", label: "Home" },
     { path: "destination", label: "DESTINATION" },
     { path: "/crew", label: "CREW" },
     { path: "/technology", label: "TECHNOLOGY" },

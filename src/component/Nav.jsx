@@ -14,7 +14,7 @@ const Nav = () => {
     <>
       <header className=" relative z-2 w-full  lg:py-7  font-Barlow_Condensed  text-white_custom lg:text-2xl ">
         <nav className="flex items-center justify-center ">
-          <a href="/" className="flex-1 p-6">
+          <a href="/space-tourism" className="flex-1 p-6">
             <img
               className={`logo-image`}
               src={Logo}
