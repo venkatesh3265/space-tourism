@@ -10,6 +10,12 @@
     <link rel="stylesheet" crossorigin href="/space-tourism/assets/index-Ca_paOQy.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+    <script>
+      // Redirect to /space-tourism/ if accessed directly via the root path
+      if (location.pathname === '/') {
+        location.replace('/space-tourism/');
+      }
+    </script>
   </body>
 </html>
