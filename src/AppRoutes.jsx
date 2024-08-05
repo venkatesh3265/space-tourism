@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages/Home';  
 import Destination from './pages/Destination';
 import Crew from './pages/Crew';
@@ -37,4 +37,12 @@ const AppRoutes = () => {
   );
 };
 
-export default AppRoutes;
+const App = () => {
+  return (
+    <Router>
+      <AppRoutes />
+    </Router>
+  );
+};
+
+export default App;
