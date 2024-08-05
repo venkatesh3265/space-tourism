@@ -1,9 +1,11 @@
-import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages/Home';  
 import Destination from './pages/Destination';
 import Crew from './pages/Crew';
 import Technology from './pages/Technology';
 import Nav from './component/Nav';
+
+
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -26,21 +28,13 @@ const AppRoutes = () => {
     <main className={`relative bg-cover bg-no-repeat min-h-screen bg-center flex flex-col ${backgroundClass}`}>
       <Nav />
       <Routes>
-        <Route path='/space-tourism' element={<Home />} />
+        <Route path='/space-tourism/' element={<Home />} />
         <Route path='/destination' element={<Destination />} />
-        <Route path='/crew' element={<Crew />} />
+        <Route path='/crew' element={<Crew/>} />
         <Route path='/technology' element={<Technology />} />
       </Routes>
     </main>
   );
 };
 
-const App = () => {
-  return (
-    <Router>
-      <AppRoutes />
-    </Router>
-  );
-};
-
-export default App;
+export default AppRoutes;
